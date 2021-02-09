@@ -58,7 +58,7 @@ class _MyAppHomeState extends State<MyAppHome> {
                 color: Colors.grey,
               ),
               subtitle: Padding(
-                padding: EdgeInsets.only(left: size / 3.5),
+                padding: EdgeInsets.only(left: size / 3.3),
                 child: Text(
                   "Paranızı israf etmeyin!",
                   style: TextStyle(fontSize: 16),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:para_biriktir/bilesenler.dart';
 import 'package:para_biriktir/pages/home.dart';
+import 'package:para_biriktir/form.dart';
 
 class Gelir extends StatefulWidget {
   @override
@@ -11,6 +12,10 @@ class Gelir extends StatefulWidget {
 class _GelirState extends State<Gelir> {
   @override
   Widget build(BuildContext context) {
+    //Ekran boyutunu almak için
+    var scrWidth = MediaQuery.of(context).size.width;
+    var scrHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Gelir"),
@@ -38,6 +43,20 @@ class _GelirState extends State<Gelir> {
                         ));
               }),
         ],
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            FormOlustur(
+              sekmeBaslik: "Gelir Adı",
+              icYazi: "Gelir kaynağı(Örn: Maaş)",
+            ),
+            FormOlustur(
+              sekmeBaslik: "Miktar",
+              icYazi: "1000 TL",
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.white,

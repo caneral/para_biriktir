@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:para_biriktir/bilesenler.dart';
+import 'package:para_biriktir/form.dart';
 import 'package:para_biriktir/pages/home.dart';
 
 class Gider extends StatefulWidget {
@@ -38,6 +39,20 @@ class _GiderState extends State<Gider> {
                         ));
               })
         ],
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            FormOlustur(
+              sekmeBaslik: "Gider Adı",
+              icYazi: "Gider kaynağı(Örn: Su Faturası)",
+            ),
+            FormOlustur(
+              sekmeBaslik: "Miktar",
+              icYazi: "100 TL",
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.white,

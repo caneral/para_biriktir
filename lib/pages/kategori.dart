@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:para_biriktir/bilesenler.dart';
+import 'package:para_biriktir/form.dart';
 import 'package:para_biriktir/pages/home.dart';
 
 class Kategori extends StatefulWidget {
@@ -38,6 +39,20 @@ class _KategoriState extends State<Kategori> {
                         ));
               })
         ],
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            FormOlustur(
+              sekmeBaslik: "Kategori Adı",
+              icYazi: "Kategori",
+            ),
+            FormOlustur(
+              sekmeBaslik: "Miktar",
+              icYazi: "1000 TL",
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         color: Colors.white,
